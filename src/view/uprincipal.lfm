@@ -1,0 +1,90 @@
+object fPrincipal: TfPrincipal
+  Left = 252
+  Height = 398
+  Top = 250
+  Width = 677
+  Caption = 'Sistema Fluxo de Caixa'
+  ClientHeight = 398
+  ClientWidth = 677
+  object pnlEsquerda: TPanel
+    Left = 0
+    Height = 398
+    Top = 0
+    Width = 170
+    Align = alLeft
+    BevelOuter = bvNone
+    ClientHeight = 398
+    ClientWidth = 170
+    Color = 14929802
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 0
+    object btnContas: TSpeedButton
+      Left = 16
+      Height = 32
+      Top = 16
+      Width = 136
+      Caption = 'Contas'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -15
+      Font.Name = 'Segoe UI Light'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+    end
+    object btnPlanos: TSpeedButton
+      Left = 16
+      Height = 32
+      Top = 56
+      Width = 136
+      Caption = 'Planos'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -15
+      Font.Name = 'Segoe UI Light'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+    end
+    object btnLancamentos: TSpeedButton
+      Left = 16
+      Height = 32
+      Top = 96
+      Width = 136
+      Caption = 'Lançamentos'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -15
+      Font.Name = 'Segoe UI Light'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+    end
+    object btnSair: TSpeedButton
+      Left = 16
+      Height = 32
+      Top = 352
+      Width = 136
+      Caption = 'Sair'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -15
+      Font.Name = 'Segoe UI Light'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      OnClick = btnSairClick
+      ParentFont = False
+    end
+  end
+  object Label1: TLabel
+    Left = 184
+    Height = 30
+    Top = 6
+    Width = 144
+    Caption = 'Fluxo de Caixa'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -21
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+end
