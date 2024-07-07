@@ -1,0 +1,143 @@
+object fConfiguraBancoDados: TfConfiguraBancoDados
+  Left = 252
+  Height = 241
+  Top = 250
+  Width = 502
+  Caption = 'Configurar Base de Dados'
+  ClientHeight = 241
+  ClientWidth = 502
+  OnShow = FormShow
+  Position = poMainFormCenter
+  object Label1: TLabel
+    Left = 24
+    Height = 30
+    Top = 0
+    Width = 253
+    Caption = 'Configurar Base de Dados'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -21
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object pnlDetalheEsquerda: TPanel
+    Left = 0
+    Height = 241
+    Top = 0
+    Width = 18
+    Align = alLeft
+    BevelOuter = bvNone
+    Color = 14929802
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 0
+  end
+  object btnSalvar: TSpeedButton
+    Left = 112
+    Height = 32
+    Top = 201
+    Width = 136
+    Caption = 'Salvar'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI Light'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = btnSalvarClick
+    ParentFont = False
+  end
+  object btnCancelar: TSpeedButton
+    Left = 253
+    Height = 32
+    Top = 201
+    Width = 136
+    Caption = 'Cancelar'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI Light'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = btnCancelarClick
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 40
+    Height = 15
+    Top = 48
+    Width = 76
+    Caption = 'Base de Dados'
+  end
+  object edtBaseDados: TEdit
+    Left = 40
+    Height = 23
+    Top = 64
+    Width = 208
+    TabOrder = 1
+    Text = 'edtBaseDados'
+  end
+  object edtServidor: TEdit
+    Left = 40
+    Height = 23
+    Top = 112
+    Width = 208
+    TabOrder = 2
+    Text = 'edtServidor'
+  end
+  object Label3: TLabel
+    Left = 40
+    Height = 15
+    Top = 96
+    Width = 43
+    Caption = 'Servidor'
+  end
+  object edtPorta: TEdit
+    Left = 40
+    Height = 23
+    Top = 160
+    Width = 64
+    NumbersOnly = True
+    TabOrder = 3
+    Text = 'edtPorta'
+  end
+  object Label4: TLabel
+    Left = 40
+    Height = 15
+    Top = 144
+    Width = 28
+    Caption = 'Porta'
+  end
+  object Label5: TLabel
+    Left = 272
+    Height = 15
+    Top = 48
+    Width = 40
+    Caption = 'Usuário'
+  end
+  object edtUsuario: TEdit
+    Left = 272
+    Height = 23
+    Top = 64
+    Width = 208
+    TabOrder = 4
+    Text = 'edtUsuario'
+  end
+  object edtSenha: TEdit
+    Left = 272
+    Height = 23
+    Top = 112
+    Width = 208
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 5
+    Text = 'edtSenha'
+  end
+  object Label6: TLabel
+    Left = 272
+    Height = 15
+    Top = 96
+    Width = 32
+    Caption = 'Senha'
+  end
+end

@@ -6,6 +6,7 @@ object fPrincipal: TfPrincipal
   Caption = 'Sistema Fluxo de Caixa'
   ClientHeight = 398
   ClientWidth = 677
+  OnCreate = FormCreate
   object pnlEsquerda: TPanel
     Left = 0
     Height = 398
@@ -70,6 +71,20 @@ object fPrincipal: TfPrincipal
       Font.Pitch = fpVariable
       Font.Quality = fqDraft
       OnClick = btnSairClick
+      ParentFont = False
+    end
+    object btnConfig: TSpeedButton
+      Left = 16
+      Height = 32
+      Top = 312
+      Width = 136
+      Caption = 'Configurar DB'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -15
+      Font.Name = 'Segoe UI Light'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      OnClick = btnConfigClick
       ParentFont = False
     end
   end

@@ -42,6 +42,13 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uPrincipal"/>
       </Unit>
+      <Unit>
+        <Filename Value="view\uconfigurabancodados.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fConfiguraBancoDados"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uConfiguraBancoDados"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -56,6 +63,9 @@
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>
+      <Debugging>
+        <DebugInfoType Value="dsDwarf3"/>
+      </Debugging>
       <Options>
         <Win32>
           <GraphicApplication Value="True"/>
