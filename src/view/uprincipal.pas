@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
-  Buttons;
+  Buttons, IniFiles;
 
 type
 
@@ -24,7 +24,7 @@ type
     procedure btnSairClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
-
+    procedure carregar_ini;
   public
 
   end;
@@ -32,6 +32,12 @@ type
 var
   fPrincipal: TfPrincipal;
   config_file_ini: string;
+  cfg_path_app: string;
+  cfg_db: string;
+  cfg_server: string;
+  cfg_user: string;
+  cfg_passwd: string;
+  cfg_port: Integer;
 
 implementation
 
@@ -51,6 +57,7 @@ end;
 procedure TfPrincipal.FormCreate(Sender: TObject);
 begin
   config_file_ini := ChangeFileExt(ParamStr(0), '.ini');
+  cfg_path_app:= ExtractFilePath(ParamStr(0));
 end;
 
 procedure TfPrincipal.btnConfigClick(Sender: TObject);
@@ -60,6 +67,22 @@ begin
     fConfiguraBancoDados.ShowModal;
   finally
     FreeAndNil(fConfiguraBancoDados);
+  end;
+end;
+
+procedure TfPrincipal.carregar_ini;
+var
+  arquivo_ini: TIniFile;
+begin
+  arquivo_ini := TIniFile.Create(config_file_ini);
+  try
+    cfg_db := arquivo_ini.ReadString('ConexaoBD', 'Banco', '');
+    cfg_server := arquivo_ini.ReadString('ConexaoBD', 'Servidor', '');
+    cfg_port   := arquivo_ini.ReadInteger('ConexaoBD', 'Porta', 3306);
+    cfg_user   := arquivo_ini.ReadString('ConexaoBD', 'Usuario', '');
+    cfg_passwd := arquivo_ini.ReadString('ConexaoBD', 'Senha', '');
+  finally
+    arquivo_ini.Free;
   end;
 end;
 

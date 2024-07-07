@@ -7,6 +7,7 @@ object fPrincipal: TfPrincipal
   ClientHeight = 398
   ClientWidth = 677
   OnCreate = FormCreate
+  LCLVersion = '3.4.0.0'
   object pnlEsquerda: TPanel
     Left = 0
     Height = 398
